@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+
+div, body, span, ul, li, h1, h2, h3, h4, h5, p{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: montserrat;
+    --bg-color: #ffb18c;
+    --text-color: #333;
+    --faq-color: #fff;
+    --dark-color: rgb(255,130,77);
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+.faq{
+    max-width: clamp(300px, 70%, 700%);
+    margin: auto;
+}
+
+.faq details{
+    background-color: var(--faq-color);
+    margin: 7px;
+    padding: 7px;
+}
+
+summary{
+    user-select: none;
+    position: relative;
+}
+
+.content{
+    padding: 5px 10px;
+    margin:10px;
+    margin-bottom: 0px;
+    border-top: 1px solid var(--bg-color);
+    font-size: .8rem;
+    color: var(--text-color);
+}
+
+summary::marker{
+    content: "";
+}
+
+summary::before{
+    content: "+";
+    color: var(--dark-color);
+    position: absolute;
+    right: 0;
+    font-weight: 900;
+}
+
+details[open] summary::before{
+    content: "-";
+}
+
+details b{
+    background-color: var(--dark-color);
+    padding: 4px 2px;
+    color: #fff;
+}

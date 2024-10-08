@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="initial_web_page/style.css">
+</head>
+<body>
+    <header class="header">
+        <input class="header__checkbox" type="checkbox" id="open-menu">
+        <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+        <div class="header__logo-container">
+            <img class="header__logo" src="initial_web_page/Resources/Logo EAO.jpg" alt="">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="sidebar_menu/index.html">Sidebar</a></li>
+                <li class="header__nav-item"><a href="flip_card/index.html">FlipCard</a></li>
+                <li class="header__nav-item"><a href="chatbox/index.html">ChatBox</a></li>
+                <li class="header__nav-item"><a href="one_page_view/index.html">One page View</a></li>
+                <li class="header__nav-item"><a href="acordeon_menu/index.html">Acordeon</a></li>
+                <li class="header__nav-item"><a href="pretty_visualizer/index.html">PrettyAnimated</a></li>
+            </ul>
+        </nav>
+
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#profile">About</a></li>
+                <li class="header__nav-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="header__nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile" id="profile">
+        <div class="profile__wrapper">
+            <div class="profile__img-container">
+                <img class="profile__img" src="initial_web_page/Resources/Gatomalcriado.png" alt="">
+            </div>
+            <div class="profile__data-container">
+                <div class="profile__description">
+                    <h1>Alex Otero</h1>
+                    <p>La sensación ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolorum praesentium blanditiis dolores facere ipsa recusandae voluptatum labore nisi, eligendi ipsam magni vel doLa sensaciónque, fugiat repudiandae architecto quo rerum repellendus!</p>
+                </div>
+                <div class="profile__skill-container">
+                    <div class="profile__skill-container">
+                        <h2>SKILLS</h2>
+                        <ul>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--70">70%</div>
+                                </div>
+                                <span class="profile__skill-name">Python</span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--80">80%</div>
+                                </div>
+                                <span class="profile__skill-name">Java</span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--60">60%</div>
+                                </div>
+                                <span class="profile__skill-name">HTML</span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--60">60%</div>
+                                </div>
+                                <span class="profile__skill-name">CSS</span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--50">50%</div>
+                                </div>
+                                <span class="profile__skill-name">Git</span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--50">50%</div>
+                                </div>
+                                <span class="profile__skill-name">SQL</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="portfolio__title">Portfolio Section</h2>
+        <div class="portfolio__project-container">
+            <div class="portfolio__project">PROJECT</div>
+            <div class="portfolio__project">PROJECT</div>
+            <div class="portfolio__project">PROJECT</div>
+            <div class="portfolio__project">PROJECT</div>
+            <div class="portfolio__project">PROJECT</div>
+            <div class="portfolio__project">PROJECT</div>
+        </div>
+    </section>
+
+    <section class="form" id="contact">
+        <h2 class="form__title">Contact</h2>
+        <form class="form__form" action="">
+            <div class="form__input-container">
+                <label for=""> Nombre
+                    <input type="text" placeholder="John">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label for=""> Apellido
+                    <input type="text" placeholder="McLovin">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label for=""> Mail
+                    <input type="email" placeholder="yourname@email.com">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label for=""> Mensaje
+                    <textarea name="" id="" placeholder="Escribe tu idea aquí"></textarea>
+                </label>
+            </div>
+            <div class="form__input-container">
+                <input type="submit">
+            </div>
+            
+            
+        </form>
+    </section>
+
+    <footer>
+        Alexxxx
+    </footer>
+</body>
+</html>
