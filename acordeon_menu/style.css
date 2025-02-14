@@ -22,6 +22,7 @@ body{
 .faq{
     max-width: clamp(300px, 70%, 700%);
     margin: auto;
+    margin-top: 10rem;
 }
 
 .faq details{
@@ -33,6 +34,20 @@ body{
 summary{
     user-select: none;
     position: relative;
+}
+
+.exit{
+    position: absolute;
+    top: 5%;
+    left: 42%;
+    z-index: 1000;
+    background-color: #f42;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: #222 solid 0.25rem;
 }
 
 .content{

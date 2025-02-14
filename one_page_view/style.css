@@ -27,6 +27,20 @@ header{
     justify-content: center;
 }
 
+.exit{
+    position: absolute;
+    top: 120%;
+    left: 5%;
+    z-index: 1000;
+    background-color: #f42;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: #222 solid 0.25rem;
+}
+
 .text-container{
     min-height: 100vh;
     position: fixed;

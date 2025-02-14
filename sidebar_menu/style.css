@@ -23,6 +23,20 @@ body{
 
 /* SIDEBAR STYLES */
 
+.exit{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    background-color: #f42;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: #222 solid 0.25rem;
+}
+
 .sidebar{
     background-color: var(--sidebar--color);
     position: fixed;
@@ -120,7 +134,7 @@ body{
     width: 2rem;
 }
 
-.item--profile .profile-option{
+.item--profile .profile--option{
     font-size: .8rem;
     color: var(--text-color);
     padding: 0 12px;
@@ -221,3 +235,7 @@ input[type="checkbox"]:checked ~ label::before{
 .sidebar:has(input[type="checkbox"]:checked) .sidebar__picture img{
     display: none;
 } 
+
+.sidebar__profile li a{
+    padding-left: 1rem;
+}

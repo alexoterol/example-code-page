@@ -17,6 +17,20 @@ body{
     font-family: Montserrat;
 }
 
+.exit{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    z-index: 1000;
+    background-color: #f42;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: #222 solid 0.25rem;
+}
+
 .card{
     max-width: clamp(160px, 50%, 320px);
     background-color: var(--card-bg-color);

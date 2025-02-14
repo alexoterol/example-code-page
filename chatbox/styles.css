@@ -15,16 +15,33 @@ body{
     background-color: var(--bg-color);
 }
 
+.exit{
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    z-index: 1000;
+    background-color: #f42;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: #222 solid 0.25rem;
+}
+
 .chat{
     max-width: clamp(300px, 70%, 900px);
     background-color: var(--chat-bg-color);
     margin: 50px auto;
     border-radius: 20px;
     box-shadow: 2px 2px 9px #0003;
+    max-width: 40%;
 }
 
 .chat__user{
+    padding: 0.25rem;
     display: flex;
+    gap: 1rem;
     align-items: center;
     border-bottom: 1px solid var(--dark-color);
 }

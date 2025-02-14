@@ -3,7 +3,7 @@
 }
 
 body{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     background-color: #e2eaff;
     color: #101632dd;
 }
@@ -20,10 +20,11 @@ body, div, ul, nav, header, footer, a, li, label{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    z-index: 10;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     text-align: center;
-    font-size: 25px;
+    font-size: 22px;
     color: #48e;
 }
 
@@ -40,7 +41,8 @@ body, div, ul, nav, header, footer, a, li, label{
 }
 
 .header__nav{
-    display: none;
+    display: flex;
+    gap: 20px;
     background-color: #fff;
     position: absolute;
     height: 100vh;
@@ -80,10 +82,17 @@ body, div, ul, nav, header, footer, a, li, label{
 
 .header__nav-item a{
     color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 .header__nav-item a:not(:is(:hover,:active)){
     text-decoration: none;
+}
+
+.header__nav-item a:hover {
+    color: #18b;
 }
 
 /*--------------- HEADER QUERIES -------------------*/
@@ -127,6 +136,8 @@ body, div, ul, nav, header, footer, a, li, label{
     container-name: profile;
     container-type: inline-size;
     animation: aparecer 2.4s -.6s both;
+    min-height: 110vh;
+    padding-top: 5vh;
 }
 
 .profile__wrapper{
@@ -146,7 +157,6 @@ body, div, ul, nav, header, footer, a, li, label{
 .profile__img-container{
     max-height: 500px;
     overflow: hidden;
-
 }
 
 .profile__img{
@@ -156,6 +166,21 @@ body, div, ul, nav, header, footer, a, li, label{
 
 h1{
     color: #48e;
+}
+
+.profile__description h1{
+    padding-top: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 0;
+}
+
+.profile__description p{
+    font-size: 1.15rem;
+    color: #000b;
+}
+
+.profile__skill-container{
+    margin: auto;
 }
 
 .profile__skill-container h2{
@@ -291,11 +316,24 @@ h1{
     animation: aparecer both;
     animation-timeline: view();
     animation-range: cover 5% cover 40%;
+    text-decoration: none;
 }
 
 .portfolio__project:hover{
     opacity: 0.74;
     outline: 2px solid #fff6;
+    transform: scale(1.015);
+}
+
+.portfolio__project span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFF;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
 }
 
 /*--------------- PORTFOLIO QUERIES -------------------*/
@@ -325,34 +363,64 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 25px 0;
+    padding: 30px 15px;
+    background-color: #eee;
+    
     container-name: form;
     container-type: inline-size;
     animation: aparecer both;
+    
     animation-timeline: view();
     animation-range: cover 5% contain 40%;
 }
 
+.form__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .form__form{
-    padding: 12px;
+    padding: 1rem;
     max-width: 650px;
-    width: 100%;
+    width: 90%;
     display: grid;
-    margin-bottom: 30px;
-    
+    gap: 15px;
     padding: 20px;
+}
+
+.form__input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form__input-container label {
+    font-size: 1.25rem;
+    font-weight: 700;
     
 }
 
+.form__input-container input{
+    width: 100%;
+    background-color: #eee;
+}
+
+.form__input-container textarea{
+    width: 100%;
+    background-color: #eee;
+}
 
 
 .form__input-container :is(input,textarea){
     width: 100%;
-    padding: 9px;
-    font-size: 16px;
+    padding: 10px;
+    font-size: 1rem;
     border: none;
-    margin: 4px;
+    margin: 6px;
     box-shadow: 2px 2px 5px #0003;
+    margin-top: 5px;
 }
 
 .form__input-container textarea{
@@ -364,7 +432,14 @@ h1{
 .form__input-container input[type="submit"]{
     padding: 12;
     background-color: #48e;
-    color: #fff
+    color: #fff;
+    font-size:  1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form__input-container input[type="submit"]:hover {
+    background-color: #36c;
 }
 
 .form__title{
@@ -385,7 +460,7 @@ h1{
         box-shadow: 0px 0px 12px #0003;
         border-radius: 12px;
         background-image: radial-gradient(#18233f06, #18233f33);
-        background-color: #1112;
+        background-color: #fffe;
     }
 
     .form__input-container input:first-child{
@@ -424,6 +499,43 @@ footer{
     background-color: #18233f;
     color: #fffd;
     font-size: 22px;
+}
+
+.footer__content {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer__nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #48e;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer__nav a:hover {
+    color: #36c;
+}
+
+.footer__social a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #48e;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.footer__social a:hover {
+    color: #36c;
+}
+
+.footer__copyright {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
 }
 
 /*--------------- FOOTER END  -------------------*/
